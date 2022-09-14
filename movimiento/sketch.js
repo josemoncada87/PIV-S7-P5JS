@@ -7,12 +7,11 @@ let creciendo = true;
 
 function setup() {
   createCanvas(400, 400);
+  background(0);
 }
 
 function draw() {
-  //background(0);
-
-  fill(0,5);
+  fill(5,15);
   rect(0,0,400,400);
 
   if(posX > 0 && posX < 133){
@@ -32,11 +31,11 @@ function draw() {
   //stroke(255);
   //strokeWeight(8);
 
-  angulo += (PI/180)*36;
-  posY = 200 + (sin(angulo)*random(50));
+  angulo += (PI/180)*72;
+  posY = 200 + (sin(angulo)*100);
 
   ellipse(posX,posY,tam,tam);
-  posX = posX + 10;
+  posX = posX + 40;
   if(creciendo === true){
     tam *= 1.1;
   }else{
@@ -45,7 +44,7 @@ function draw() {
 
   if(posX>415){
     posX = -15;
-    tam = 20;
+    tam = 10;
     creciendo = true;
   }
 
